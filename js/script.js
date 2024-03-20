@@ -15,34 +15,44 @@ const teamArray = [
        photo: 'wayne-barnett-founder-ceo'
     },
     {
-        firtname: 'Angela Carrol',
+        name: 'Angela Carrol',
         role: 'Chief Editor',
-       photo: 'angela-caroll-chief-editor'
+        photo: 'angela-caroll-chief-editor'
     },
     {
-        firtname: 'Walter Gordon',
+        name: 'Walter Gordon',
         role: 'Office Manager',
-       photo: 'walter-gordon-office-manager'
+        photo: 'walter-gordon-office-manager'
     },
     {
-        firtname: 'Angela Lopez',
+        name: 'Angela Lopez',
         role: 'Social Media Manager',
-       photo: 'angela-lopez-social-media-manager'
+        photo: 'angela-lopez-social-media-manager'
     },
     {
-        firtname: 'Scott Estrada',
+        name: 'Scott Estrada',
         role: 'Developer',
-       photo: 'scott-estrada-developer'
+        photo: 'scott-estrada-developer'
     },
     {
-        firtname: 'Barbara Ramos',
+        name: 'Barbara Ramos',
         role: 'Graphic Designer',
-       photo: 'barbara-ramos-graphic-designer'
+        photo: 'barbara-ramos-graphic-designer'
     },
 ];
-
+const list = document.querySelector('#list')
 // MILESTONE 1 
 for(let i = 0; i < teamArray.length; i++){
     const thisTeam = teamArray[i];
     console.log(thisTeam);
+// MILESTONE 2 
+    const newLi =`
+    <li>
+        <h2>${thisTeam.name}</h2>
+        <p>ROLE ${thisTeam.role}</p>
+        <p><a href="#">${thisTeam.photo}</a></p>
+    </li>
+    `;
+
+    list.innerHTML += newLi;
 }
