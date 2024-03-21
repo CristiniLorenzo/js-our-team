@@ -12,32 +12,32 @@ const teamArray = [
     {
        name: 'Wayne Barnett',
        role: 'Founder & CEO',
-       photo: 'wayne-barnett-founder-ceo'
+       photo: 'wayne-barnett-founder-ceo.jpg'
     },
     {
         name: 'Angela Carrol',
         role: 'Chief Editor',
-        photo: 'angela-caroll-chief-editor'
+        photo: 'angela-caroll-chief-editor.jpg'
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        photo: 'walter-gordon-office-manager'
+        photo: 'walter-gordon-office-manager.jpg'
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        photo: 'angela-lopez-social-media-manager'
+        photo: 'angela-lopez-social-media-manager.jpg'
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        photo: 'scott-estrada-developer'
+        photo: 'scott-estrada-developer.jpg'
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        photo: 'barbara-ramos-graphic-designer'
+        photo: 'barbara-ramos-graphic-designer.jpg'
     },
 ];
 const list = document.querySelector('#list')
@@ -45,12 +45,14 @@ const list = document.querySelector('#list')
 for(let i = 0; i < teamArray.length; i++){
     const thisTeam = teamArray[i];
     console.log(thisTeam);
+
+    console.log(`${thisTeam.name}`,`${thisTeam.role}`,`${thisTeam.image}`)
 // MILESTONE 2 
     const newLi =`
     <li>
         <h2>${thisTeam.name}</h2>
         <p>ROLE ${thisTeam.role}</p>
-        <p><a href="#">${thisTeam.photo}</a></p>
+        <p><img src="./img/${thisTeam.photo}" alt=""></p>
     </li>
     `;
 
